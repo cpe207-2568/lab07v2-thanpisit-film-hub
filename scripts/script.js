@@ -3,7 +3,7 @@ const firstNameInput = document.querySelector("#first-name-input");
 const lastNameInput = document.querySelector("#last-name-input");
 const emailInput = document.querySelector("#email-input");
 const passwordInput = document.querySelector("#password-input");
-const passwordconfirmInput = document.querySelector("#password-confirm-input")
+const passwordConfirmInput = document.querySelector("#password-confirm-input")
 // create reference for buttons.
 const submitBtn = document.querySelector("#submit-btn");
 const resetBtn = document.querySelector("#reset-btn");
@@ -96,11 +96,11 @@ submitBtn.onclick = () => {
 };
 
 resetBtn.onclick = () => {
-  firstNameInput.value = ""
-  lastNameInput.value = ""
-  emailInput.value = ""
-  passwordInput.value = ""
-  passwordconfirmInput.value = ""
+  firstNameInput.value = "";
+  lastNameInput.value = "";
+  emailInput.value = "";
+  passwordInput.value = "";
+  passwordconfirmInput.value = "";
 
   firstNameInput.classList.remove("is-invalid");
   firstNameInput.classList.remove("is-valid");
@@ -110,7 +110,7 @@ resetBtn.onclick = () => {
   emailInput.classList.remove("is-valid");
   passwordInput.classList.remove("is-invalid");
   passwordInput.classList.remove("is-valid"); 
-  passwordConfirmInput.classList.remove("is-invalid")
-  passwordConfirmInput.classList.remove("is-valid")
+  passwordConfirmInput.classList.remove("is-invalid");
+  passwordConfirmInput.classList.remove("is-valid");
 }
 // add callback function for Reset button.
