@@ -7,7 +7,7 @@
 
 ชื่อ-สกุล :ธัญพิสิษฐ์ โนนทิง
 
-GitHub Page URL :
+GitHub Page URL :https://cpe207-2568.github.io/lab07v2-thanpisit-film-hub/
 
 ---
 
