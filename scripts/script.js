@@ -30,13 +30,25 @@ emailInput.onkeyup = () => {
   emailInput.classList.remove("is-invalid");
 }
 
+passwordInput.onkeyup = () => {
+  passwordInput.classList.remove("is-valid");
+  passwordInput.classList.remove("is-invalid");
+}
+
+passwordconfirmInput.onkeyup = () => {
+  passwordconfirmInput.classList.remove("is-valid");
+  passwordconfirmInput.classList.remove("is-invalid");
+}
 // add callback functions for other input events.
 // (lastname, email, password, confirm password)
 
 // add callback function for submit button.
 submitBtn.onclick = () => {
   isFirstNameOk = false;
-
+  islastNameOk = false;
+  isEmailOk = false;
+  isPasswordOk = false;
+  isPasswordConfirmOk = false;
   // validate first name
   if (firstNameInput.value === "") {
     firstNameInput.classList.add("is-invalid");
