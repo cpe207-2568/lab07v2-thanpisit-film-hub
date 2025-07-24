@@ -114,3 +114,4 @@ resetBtn.onclick = () => {
   passwordConfirmInput.classList.remove("is-valid");
 }
 // add callback function for Reset button.
+//Complete
