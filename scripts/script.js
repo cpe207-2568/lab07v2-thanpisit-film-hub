@@ -44,11 +44,11 @@ passwordconfirmInput.onkeyup = () => {
 
 // add callback function for submit button.
 submitBtn.onclick = () => {
-  isFirstNameOk = false;
-  isLastNameOk = false;
-  isEmailOk = false;
-  isPasswordOk = false;
-  isPasswordConfirmOk = false;
+  let isFirstNameOk = false;
+  let isLastNameOk = false;
+  let isEmailOk = false;
+  let isPasswordOk = false;
+  let isPasswordConfirmOk = false;
   // validate first name
   if (firstNameInput.value === "") {
     firstNameInput.classList.add("is-invalid");
@@ -64,7 +64,7 @@ submitBtn.onclick = () => {
     isLastNameOk = true;
   }
 
-  let Ans = valideteEmail(emailInput.value);
+  let Ans = validateEmail(emailInput.value);
   if (Ans === false) emailInput.classList.add("is-invalid");
   else {
     emailInput.classList.add("is-valid");
@@ -100,7 +100,7 @@ resetBtn.onclick = () => {
   lastNameInput.value = ""
   emailInput.value = ""
   passwordInput.value = ""
-  passwordconfirm.value = ""
+  passwordconfirmInput.value = ""
 
   firstNameInput.classList.remove("is-invalid");
   firstNameInput.classList.remove("is-valid");
