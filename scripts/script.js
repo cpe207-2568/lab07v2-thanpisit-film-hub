@@ -3,7 +3,7 @@ const firstNameInput = document.querySelector("#first-name-input");
 const lastNameInput = document.querySelector("#last-name-input");
 const emailInput = document.querySelector("#email-input");
 const passwordInput = document.querySelector("#password-input");
-const passwordconfirm = document.querySelector("#password-confirm-input")
+const passwordconfirmInput = document.querySelector("#password-confirm-input")
 // create reference for buttons.
 const submitBtn = document.querySelector("#submit-btn");
 const resetBtn = document.querySelector("#reset-btn");
@@ -45,7 +45,7 @@ passwordconfirmInput.onkeyup = () => {
 // add callback function for submit button.
 submitBtn.onclick = () => {
   isFirstNameOk = false;
-  islastNameOk = false;
+  isLastNameOk = false;
   isEmailOk = false;
   isPasswordOk = false;
   isPasswordConfirmOk = false;
@@ -64,7 +64,7 @@ submitBtn.onclick = () => {
     isLastNameOk = true;
   }
 
-  let Ans = valideteEmail(emailInput);
+  let Ans = valideteEmail(emailInput.value);
   if (Ans === false) emailInput.classList.add("is-invalid");
   else {
     emailInput.classList.add("is-valid");
@@ -78,7 +78,7 @@ submitBtn.onclick = () => {
     isPasswordOk = true;
   }
 
-  if (passwordconfirmInput.value === "" || passwordconfirmInput !== passwordInput) {
+  if (passwordconfirmInput.value === "" || passwordconfirmInput.value !== passwordInput.value) {
     passwordconfirmInput.classList.add("is-invalid");
   } else {
     passwordconfirmInput.classList.add("is-valid");
@@ -92,15 +92,15 @@ submitBtn.onclick = () => {
 
   // validate confirm password
 
-  if (isFirstNameOk == true && isLastNameOk == true && isEmailOk == true && isPasswordOk == true && isPasswordConfirm == Ok) alert("Registered successfully");
+  if (isFirstNameOk == true && isLastNameOk == true && isEmailOk == true && isPasswordOk == true && isPasswordConfirmOk == true) alert("Registered successfully");
 };
 
 resetBtn.onclick = () => {
-  firstNameInput = ""
-  lastNameInput = ""
-  emailInput = ""
-  passwordInput = ""
-  passwordconfirm = ""
+  firstNameInput.value = ""
+  lastNameInput.value = ""
+  emailInput.value = ""
+  passwordInput.value = ""
+  passwordconfirm.value = ""
 
   firstNameInput.classList.remove("is-invalid");
   firstNameInput.classList.remove("is-valid");
